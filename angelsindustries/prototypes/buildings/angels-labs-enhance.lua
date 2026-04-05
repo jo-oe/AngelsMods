@@ -108,7 +108,7 @@ if angelsmods.industries.tech then
         "bob-alien-science-pack-orange",
         "bob-alien-science-pack-purple",
         "bob-alien-science-pack-red",
-        "bob-alien-science-pack-yellow"
+        "bob-alien-science-pack-yellow",
       },
       module_slots = 2,
       icons_positioning = {
@@ -156,7 +156,7 @@ if angelsmods.industries.tech then
             "bob-alien-science-pack-orange",
             "bob-alien-science-pack-purple",
             "bob-alien-science-pack-red",
-            "bob-alien-science-pack-yellow",
+            "bob-alien-science-pack-yellow",            
           }),
         },
       },
@@ -209,7 +209,7 @@ if angelsmods.industries.tech then
         "bob-alien-science-pack-orange",
         "bob-alien-science-pack-purple",
         "bob-alien-science-pack-red",
-        "bob-alien-science-pack-yellow"
+        "bob-alien-science-pack-yellow",
       },
       module_slots = 2,
       icons_positioning = {
@@ -247,6 +247,14 @@ if angelsmods.industries.tech then
           create_rich_text_icons({
             "angels-science-pack-white",
             "datacore-enhance-2",
+            "bob-science-pack-gold",
+            "bob-alien-science-pack",
+            "bob-alien-science-pack-blue",
+            "bob-alien-science-pack-green",
+            "bob-alien-science-pack-orange",
+            "bob-alien-science-pack-purple",
+            "bob-alien-science-pack-red",
+            "bob-alien-science-pack-yellow",            
             "apm_nuclear_science_pack"
           }),
         },
@@ -290,6 +298,14 @@ if angelsmods.industries.tech then
       inputs = {
         "angels-science-pack-white",
         "datacore-enhance-2",
+        "bob-science-pack-gold",
+        "bob-alien-science-pack",
+        "bob-alien-science-pack-blue",
+        "bob-alien-science-pack-green",
+        "bob-alien-science-pack-orange",
+        "bob-alien-science-pack-purple",
+        "bob-alien-science-pack-red",
+        "bob-alien-science-pack-yellow",
         "apm_nuclear_science_pack"
       },
       module_slots = 3,
