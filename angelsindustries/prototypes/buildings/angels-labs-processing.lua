@@ -298,7 +298,6 @@ if angelsmods.industries.tech then
       inputs = {
         "angels-science-pack-white",
         "datacore-processing-2",
-        "angels-token-bio",
         --"datacore-processing-3",
         --"datacore-processing-4",
         --"datacore-processing-5"
