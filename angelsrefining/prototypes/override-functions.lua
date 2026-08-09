@@ -415,8 +415,8 @@ ov_functions.disable_recipe = function(recipe) -- disables recipe (may be a tabl
 end
 
 ov_functions.add_recipe_category = function(recipe_name, category)
-  if type(recipe) == "table" then
-    for _, rec in pairs(recipe) do
+  if type(recipe_name) == "table" then
+    for _, rec in pairs(recipe_name) do
       ov_functions.add_recipe_category(rec, category)
     end
   elseif data.raw["recipe-category"][category] then
