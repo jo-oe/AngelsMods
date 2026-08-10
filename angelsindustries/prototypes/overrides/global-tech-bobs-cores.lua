@@ -149,7 +149,7 @@ if angelsmods.industries.tech then
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
-    AI.core_replace("bob-repair-pack-4", "basic", "enhance")
+    AI.core_replace("bob-repair-pack-4", "processing", "enhance")
     AI.core_replace("bob-repair-pack-5", "processing", "enhance")
   end
 
@@ -284,6 +284,20 @@ if angelsmods.industries.tech then
       )
     end
   end
+
+  if mods["bobtech"] then
+    OV.remove_science_pack("bob-alien-research-blue", "datacore-processing-1")
+    OV.remove_science_pack("bob-alien-research-orange", "datacore-processing-1")
+    OV.remove_science_pack("bob-alien-research-yellow", "datacore-processing-1")
+    OV.remove_science_pack("bob-alien-research-purple", "datacore-processing-1")
+    OV.remove_science_pack("bob-alien-research-red", "datacore-processing-1")
+    OV.remove_science_pack("bob-alien-research-green", "datacore-processing-1")
+  end
+
+  OV.remove_science_pack("military", "datacore-war-1")
+  OV.remove_science_pack("gun-turret", "datacore-war-1")
+
+  AI.core_replace("lamp", "enhance", "basic")
 
   OV.execute()
 end

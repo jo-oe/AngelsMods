@@ -308,7 +308,7 @@ if angelsmods.industries.tech then
     --Rockets
     AI.pack_replace("rocketry", "green", "orange")
     AI.pre_req_replace("bob-rocket", "military-3", "angels-components-weapons-advanced")
-    AI.pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-2")
+    AI.pre_req_replace("bob-rocket", "tungsten-processing", "angels-explosives-1")
     --radars
     AI.pack_replace("radars-3", "blue", "orange")
     OV.remove_prereq("radars-4", "production-science-pack")
@@ -404,9 +404,9 @@ if angelsmods.industries.tech then
     end
     -- nuclar power
     if
-      settings.startup["bobmods-power-steam"].value == true
-      or settings.startup["bobmods-power-nuclear"].value == true
-      or settings.startup["bobmods-power-heatsources"].value == true
+        settings.startup["bobmods-power-steam"].value == true
+        or settings.startup["bobmods-power-nuclear"].value == true
+        or settings.startup["bobmods-power-heatsources"].value == true
     then
       AI.pack_replace("bob-heat-pipe-2", "blue", "orange")
       OV.remove_prereq("bob-heat-pipe-3", "production-science-pack")
@@ -441,6 +441,11 @@ if angelsmods.industries.tech then
         { type = "item", name = "angels-science-pack-blue", amount = 1 },
       }
     end
+  end
+
+  if mods["bobassembly"] then
+    AI.pack_replace("bob-electronics-machine-1", "green", "red")
+    AI.pre_req_replace("bob-electronics-machine-1", "automation-2", "automation")
   end
 
   OV.execute()

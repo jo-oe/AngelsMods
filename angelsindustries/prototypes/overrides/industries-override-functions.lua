@@ -58,7 +58,10 @@ function angelsmods.functions.AI.core_tier_up(techname, core_n)
 end
 
 function angelsmods.functions.AI.set_core(techname, core_n)
-  local has_core = false
+  local has_core = false  
+	if(not data.raw.technology[techname].unit) then
+		return
+	end
   for _, pack in pairs((data.raw.technology[techname] or { unit = { ingredients = {} } }).unit.ingredients) do
     local packname = pack[1]
     if string.find(packname, "datacore") ~= nil then
@@ -116,7 +119,7 @@ function angelsmods.functions.AI.core_builder()
         or string.find(rec_4tech, "boiler") ~= nil
       then
         --logistics is next
-        angelsmods.functions.AI.set_core(rec_4tech, "datacore-energy-1", 2)
+       	angelsmods.functions.AI.set_core(rec_4tech, "datacore-energy-1", 2)
       elseif
         string.find(rec_4tech, "insert") ~= nil
         or string.find(rec_4tech, "logistic") ~= nil
@@ -207,7 +210,7 @@ function angelsmods.functions.AI.tech_unlock_reset()
   for techname, technology in pairs(data.raw.technology) do
     if angelsmods.functions.check_exception(techname, angelsmods.industries.tech_exceptions) then
       --SET AMOUNT AND TIME REQUIRED FOR TECH TO FINISH
-      if technology.unit.ingredients and not technology.max_level then
+      if technology.unit and technology.unit.ingredients and not technology.max_level then
         for i, ingredient in pairs(technology.unit.ingredients) do
           if ingredient[1] == "angels-science-pack-grey" and techname ~= "tech-specialised-labs" then
             OV.add_prereq(techname, "tech-specialised-labs")

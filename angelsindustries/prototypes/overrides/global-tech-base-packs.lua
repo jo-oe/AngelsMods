@@ -18,6 +18,7 @@ if angelsmods.industries.tech then
     -- PETROCHEM
     "angels-basic-chemistry",
     -- SMELTING
+    "angels-solder-smelting-basic",
     -- BIO PROCESSING
     "angels-bio-processing-brown",
     "angels-bio-paper-1",
@@ -52,6 +53,7 @@ if angelsmods.industries.tech then
   AI.pack_count_update("angels-bio-temperate-farming", "angels-science-pack-red", 4)
   AI.pack_replace("angels-bio-fermentation", "green", "red")
   OV.remove_prereq("angels-bio-fermentation", "tech-green-packs")
+  OV.remove_prereq("angels-bio-fermentation", "sulfur-processing")
   OV.remove_science_pack("angels-bio-fermentation", "angels-token-bio")
   AI.pack_replace("angels-bio-arboretum-temperate-1", "green", "red")
   OV.remove_prereq("angels-bio-arboretum-temperate-1", "angels-resins")
@@ -110,7 +112,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("night-vision-equipment", "green", "orange")
   AI.pack_replace("battery-equipment", "blue", "orange")
   AI.pack_replace("solar-panel-equipment", "green", "orange")
-  AI.pack_replace("sulfur-processing", "green", "orange")
+  --AI.pack_replace("sulfur-processing", "green", "orange")
   --AI.pack_replace("plastics","green","orange")
   AI.pack_replace("modules", "green", "orange")
   AI.pack_replace("speed-module", "green", "orange")
@@ -182,7 +184,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("angels-plastic-1", "green", "orange")
   --AI.pack_replace("angels-resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
   --AI.pack_replace("angels-rocket-booster-1", "green", "orange")
-  AI.pack_replace("rocket-explosives-2", "green", "orange")
+  AI.pack_replace("rocket-explosives-1", "green", "orange")
   --INDUSTRIES
   AI.pack_replace("tech-blue-circuit", "blue", "orange")
   OV.remove_science_pack("tech-blue-circuit", "tech-blue-packs")
@@ -260,6 +262,20 @@ if angelsmods.industries.tech then
   -- WHITE SCIENCE PACKS --------------------------------------------------------
   -------------------------------------------------------------------------------
   -- none
+
+  AI.pack_replace("angels-bio-processing-alien-3", "blue", "orange")
+  AI.pack_replace("angels-construction-robots-2", "blue", "orange")
+  AI.pack_replace("bob-robot-plasma-drones", "blue", "orange")
+  AI.pack_replace("bob-railway-2", "blue", "orange")
+  AI.pack_replace("bob-fluid-wagon-2", "blue", "orange")
+  AI.pack_replace("bob-fluid-handling-2", "blue", "orange")
+
+
+  if (mods["apm_power_ldinc"]) then
+    AI.pack_replace("apm_air_cleaner_machine_1", "blue", "grey")
+  end
+
+  AI.pack_replace("lamp", "red", "grey")
 
   OV.execute()
 end

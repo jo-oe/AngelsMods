@@ -68,9 +68,10 @@ if mods["bobequipment"] then
   })
   reorder("item", "battery-equipment", "angels-personal-equipment-power-c", "a")
   reorder("item", "battery-mk2-equipment", "angels-personal-equipment-power-c", "b")
-  reorder("item", "battery-mk3-equipment", "angels-personal-equipment-power-c", "c")
+  reorder("item", "bob-battery-mk3-equipment", "angels-personal-equipment-power-c", "c")
   reorder("item", "bob-battery-mk4-equipment", "angels-personal-equipment-power-c", "d")
   reorder("item", "bob-battery-mk5-equipment", "angels-personal-equipment-power-c", "e")
+  reorder("item", "bob-battery-mk6-equipment", "angels-personal-equipment-power-c", "f")
 end
 
 -- other power stuffs

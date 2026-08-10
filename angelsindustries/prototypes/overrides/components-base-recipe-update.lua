@@ -16,11 +16,11 @@ if angelsmods.industries.components then
   OV.patch_recipes({
     {
       name = "angels-coil-glass-fiber",
-      category = "angels-strand-casting",
+      categories = { "angels-strand-casting" },
     },
     {
       name = "angels-coil-glass-fiber-2",
-      category = "angels-strand-casting-2",
+      categories = { "angels-strand-casting-2" },
     },
   })
   --battery usage
@@ -201,6 +201,13 @@ if angelsmods.industries.components then
       },
     },
   })
+end
+
+if angelsmods.industries.components and mods["apm_power_ldinc"] then
+  AI.replace_recipe_ing("boiler", "construction-frame-2", "construction-frame-1")
+  AI.replace_recipe_ing("apm_coking_plant_1", "construction-frame-2", "construction-frame-1")
+  AI.replace_recipe_ing("apm_press_machine_2", "motor-3", "motor-2")
+  AI.replace_recipe_ing("apm_offshore_pump_1", "motor-3", "motor-2")
 end
 
 if angelsmods.industries.components then

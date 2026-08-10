@@ -7,7 +7,7 @@ if angelsmods.industries.components then
   OV.patch_recipes({
     {
       name = "angels-solid-wood-pulp",
-      category = "crafting",
+      categories = { "crafting" },
       ingredients = {
         { type = "fluid", name = "water", amount = 0 },
       },
@@ -22,6 +22,7 @@ if angelsmods.industries.components then
       icon = "__angelsindustriesgraphics__/graphics/technology/red-circuit-tech.png",
       icon_size = 128,
       prerequisites = {
+        "angels-solder-smelting-basic",
         "angels-bio-paper-1",
       },
       effects = {
@@ -69,7 +70,6 @@ if angelsmods.industries.components then
         "angels-components-batteries-1",
         "angels-components-construction-2",
         "angels-components-cabling-2",
-        "automation-2",
         "angels-resins",
       },
       effects = {

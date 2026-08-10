@@ -25,6 +25,7 @@ if angelsmods.industries.tech then
   -- PETROCHEM
   AI.core_replace("angels-basic-chemistry", "processing", "basic")
   -- SMELTING
+  AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
   AI.core_replace("angels-bio-processing-brown", "processing", "basic")
   AI.core_replace("angels-bio-paper-1", "processing", "basic")
@@ -37,13 +38,13 @@ if angelsmods.industries.tech then
   OV.remove_science_pack("tech-yellow-circuit", "datacore-processing-1")
   -- DECORATION ADDONS
   if
-    mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]]
+      mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]]
   then
     --if angelsmods.addons.decorations then
     OV.set_science_pack("nilaus", "datacore-basic", 2)
   end
   if
-    mods["angelsaddons-shred"] --[[angelsmods.addons.decorations]]
+      mods["angelsaddons-shred"] --[[angelsmods.addons.decorations]]
   then
     OV.set_science_pack("deco-shred", "datacore-basic", 2)
   end
@@ -76,14 +77,14 @@ if angelsmods.industries.tech then
   OV.set_science_pack("angels-heavy-tank", "datacore-exploration-1", 2)
   -- CAB ADDONS
   if
-    mods["angelsaddons-cab"] --[[angelsmods.addons.cab]]
+      mods["angelsaddons-cab"] --[[angelsmods.addons.cab]]
   then
     OV.set_science_pack("angels-cab", "datacore-exploration-1", 2)
     OV.set_science_pack("angels-crawler", "datacore-logistic-1", 2)
   end
   -- DECORATION ADDONS
   if
-    mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]]
+      mods["angelsaddons-nilaus"] --[[angelsmods.addons.decorations]]
   then
     OV.set_science_pack("nilaus-truck", "datacore-exploration-1", 2)
   end
@@ -204,5 +205,22 @@ if angelsmods.industries.tech then
 
   -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
   AI.tech_unlock_reset()
+
+  if (mods["apm_power_ldinc"]) then
+    OV.remove_science_pack("apm_power_electricity", "datacore-energy-1")
+    OV.remove_science_pack("apm_water_supply-1", "datacore-processing-1")
+    OV.remove_science_pack("apm_steam_mining_drill", "datacore-processing-1")
+    OV.remove_science_pack("apm_fuel-4", "datacore-basic")
+    OV.set_science_pack("apm_fuel-4", "datacore-energy-1", 2)
+    --AI.core_replace("apm_fuel-4", "basic", "energy")
+  end
+
+  if (mods["apm_nuclear_ldinc"]) then
+    AI.core_replace("apm_nuclear_fuel", "basic", "energy")
+    AI.core_replace("apm_nuclear_rtg", "basic", "energy")
+    AI.core_replace("apm_nuclear_thorium_fuel", "basic", "energy")
+    AI.core_replace("apm_nuclear_neptunium_fuel", "basic", "energy")
+  end
+
   OV.execute()
 end

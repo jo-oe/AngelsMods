@@ -11,7 +11,7 @@ if angelsmods.industries.components then
       icon_size = 256,
       prerequisites = {
         --"angels-lead-smelting-1",
-        "sulfur-processing",
+        "angels-sulfur-processing-1",
         "angels-bio-paper-1",
       },
       effects = {
