@@ -222,5 +222,10 @@ if angelsmods.industries.tech then
     AI.core_replace("apm_nuclear_neptunium_fuel", "basic", "energy")
   end
 
+  if (mods["qol_research"]) then
+    AI.core_replace("qol-inventory-size-5-1", "basic", "enhance")
+    AI.core_replace("qol-movement-speed-5-1", "basic", "enhance")
+  end
+
   OV.execute()
 end
