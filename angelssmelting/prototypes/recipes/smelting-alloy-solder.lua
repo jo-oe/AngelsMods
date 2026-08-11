@@ -1,6 +1,23 @@
 data:extend({
   -- SOLDER SMELTING INTERMEDIATE
   -- SOLDER SMELTING RESULTS
+  {
+    type = "recipe",
+    name = "angels-solder-mixture",
+    categories = { "crafting" },
+    subgroup = "angels-alloys",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      { type = "item", name = "angels-plate-tin", amount = 2 },
+      { type = "item", name = "angels-plate-lead", amount = 2 },
+    },
+    results = {
+      { type = "item", name = "angels-solder-mixture", amount = 2 },
+    },
+    order = "a[solder]-a[angels-solder-mixture]-a",
+  },
+
   -- SOLDER CASTING INTERMEDIATE
   {
     type = "recipe",
@@ -127,6 +144,29 @@ data:extend({
     crafting_machine_tint = angelsmods.functions.get_fluid_recipe_tint("angels-liquid-molten-solder"),
   },
   -- SOLDER CASTING RESULT
+  {
+    type = "recipe",
+    name = "angels-solder-mixture-smelting",
+    localised_name = { "item-name.angels-solder" },
+    categories = { "smelting" },
+    subgroup = "angels-solder-casting",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "item", name = "angels-solder-mixture", amount = 2 },
+    },
+    results = {
+      { type = "item", name = "angels-solder", amount = 2 },
+    },
+    icons = angelsmods.functions.add_icon_layer(
+      angelsmods.functions.get_object_icons("angels-solder"),
+      angelsmods.functions.get_object_icons("angels-solder-mixture"),
+      { -10, -10 },
+      0.4375
+    ),
+    order = "d[angels-solder]-a",
+  },
   {
     type = "recipe",
     name = "angels-solder",

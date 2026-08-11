@@ -1,6 +1,31 @@
 data:extend({
   {
     type = "technology",
+    name = "angels-solder-smelting-basic",
+    icon = "__angelssmeltinggraphics__/graphics/technology/casting-solder-tech.png",
+    icon_size = 256,
+    prerequisites = {},
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solder-mixture",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-solder-mixture-smelting",
+      },
+    },
+    unit = {
+      count = 25,
+      ingredients = {
+        { "automation-science-pack", 1 },
+      },
+      time = 30,
+    },
+    order = "c-a",
+  },
+  {
+    type = "technology",
     name = "angels-solder-smelting-1",
     icon = "__angelssmeltinggraphics__/graphics/technology/casting-solder-tech.png",
     icon_size = 256,
