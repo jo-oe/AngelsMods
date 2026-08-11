@@ -9,7 +9,7 @@ if angelsmods.industries.components then
       localised_name = { "item-name.cable-shielding-1" },
       energy_required = 0.5,
       categories = { "crafting" },
-      enabled = true,
+      enabled = false,
       ingredients = {
         { type = "item", name = "copper-plate", amount = 1 },
       },
@@ -80,7 +80,7 @@ if angelsmods.industries.components then
       order = "f",
       energy_required = 1,
       categories = { "crafting" },
-      enabled = true,
+      enabled = false,
       ingredients = {
         { type = "item", name = "copper-cable", amount = 1 },
         { type = "item", name = "cable-shielding-1", amount = 1 },
@@ -167,7 +167,7 @@ if angelsmods.industries.components then
       localised_name = { "item-name.angels-cabling" },
       subgroup = "angels-servo-motor",
       order = "f",
-      enabled = true,
+      enabled = false,
       categories = { "crafting" },
       energy_required = 3,
       ingredients = {
@@ -316,7 +316,7 @@ if angelsmods.industries.components then
       localised_name = { "item-name.angels-servo-motor-1" },
       energy_required = 1 * angelsmods.industries.component_crafting_time_multiplier,
       categories = { "crafting" },
-      enabled = true,
+      enabled = false,
       ingredients = {
         { type = "item", name = "cable-harness-1", amount = 1 },
         { type = "item", name = "cable-shielding-1", amount = 1 },
