@@ -6,12 +6,50 @@ if angelsmods.industries.components then
   data:extend({
     {
       type = "technology",
+      name = "angels-components-cabling-1",
+      icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
+      icon_size = 128,
+      prerequisites = {
+        "electricity"
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "cable-shielding-1",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "cable-harness-1",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "cabling-cable-harness-1",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-servo-motor-1",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-cellulose-fiber-raw-wood",
+        },
+      },
+      research_trigger = {
+        type = "craft-item",
+        item = "copper-cable",
+        count = 1000,
+      },
+      order = "a-5",
+    },
+    {
+      type = "technology",
       name = "angels-components-cabling-2",
       icon = "__angelsindustriesgraphics__/graphics/technology/cable-components.png",
       icon_size = 128,
       prerequisites = {
         "angels-tin-smelting-1",
         "logistic-science-pack",
+        "angels-components-cabling-1",
       },
       effects = {
         {
