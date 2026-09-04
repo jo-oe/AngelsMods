@@ -273,6 +273,7 @@ if angelsmods.industries.tech then
 
   if (mods["apm_power_ldinc"]) then
     AI.pack_replace("apm_air_cleaner_machine_1", "blue", "grey")
+    AI.pack_replace("military-2", "green", "red")
   end
 
   AI.pack_replace("lamp", "red", "grey")
