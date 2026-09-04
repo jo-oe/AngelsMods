@@ -207,7 +207,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-mold-expendable",
-    localised_name = { "item-name.mold-expendable" },
+    localised_name = { "item-name.angels-mold-expendable" },
     categories = { "angels-sintering" },
     subgroup = "angels-mold-casting",
     energy_required = 4,
@@ -239,7 +239,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-mold-non-expendable",
-    localised_name = { "item-name.mold-non-expendable" },
+    localised_name = { "item-name.angels-mold-non-expendable" },
     categories = { "angels-sintering-3" },
     subgroup = "angels-mold-casting",
     energy_required = 4,
