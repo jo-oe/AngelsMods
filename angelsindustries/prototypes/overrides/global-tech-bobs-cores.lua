@@ -200,6 +200,8 @@ if angelsmods.industries.tech then
     OV.set_science_pack("personal-roboport-modular-equipment-2", "datacore-enhance-1", 2)
     OV.set_science_pack("personal-roboport-modular-equipment-3", "datacore-enhance-1", 2)
     OV.set_science_pack("personal-roboport-modular-equipment-4", "datacore-enhance-1", 2)
+    OV.remove_science_pack("bob-fission-reactor-equipment-3", "datacore-enhance-1")
+    OV.set_science_pack("bob-fission-reactor-equipment-3", "datacore-enhance-2", 2)
   end
 
   -------------------------------------------------------------------------------
