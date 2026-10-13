@@ -149,6 +149,7 @@ if angelsmods.industries.tech then
             "angels-science-pack-white",
             "datacore-enhance-2",
             "angels-token-bio",
+            "apm_nuclear_science_pack",
             "bob-science-pack-gold",
             "bob-alien-science-pack",
             "bob-alien-science-pack-blue",
@@ -202,6 +203,7 @@ if angelsmods.industries.tech then
         "angels-science-pack-white",
         "datacore-enhance-2",
         "angels-token-bio",
+        "apm_nuclear_science_pack",
         "bob-science-pack-gold",
         "bob-alien-science-pack",
         "bob-alien-science-pack-blue",
@@ -209,7 +211,7 @@ if angelsmods.industries.tech then
         "bob-alien-science-pack-orange",
         "bob-alien-science-pack-purple",
         "bob-alien-science-pack-red",
-        "bob-alien-science-pack-yellow"
+        "bob-alien-science-pack-yellow",
       },
       module_slots = 2,
       icons_positioning = {
